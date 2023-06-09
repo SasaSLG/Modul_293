@@ -1,0 +1,75 @@
+import com.jcraft.jsch.*;
+import java.io.File;
+import java.util.Properties;
+
+public class WebsitePublisher {
+    public static void main(String[] args) {
+        // Konfigurationseinstellungen
+        String server = "sasahuynh.bplaced.net";  // bplaced.net Server
+        int port = 22;  // SFTP-Port
+        String username = "sasahuynh_ap22c";  // bplaced.net Benutzername
+        String password = "1234";  // bplaced.net Passwort
+        String localPath = "C:\\Users\\huynhm\\IdeaProjects\\Modul_293\\.idea\\Uebungen\\T2";  // Pfad zu den lokalen Dateien
+        String remotePath = "/www/";  // Pfad auf dem Webserver
+
+        // Verbindungseinstellungen konfigurieren
+        JSch jSch = new JSch();
+        Session session = null;
+        ChannelSftp channel = null;
+        try {
+            session = jSch.getSession(username, server, port);
+            session.setPassword(password);
+            Properties config = new Properties();
+            config.put("StrictHostKeyChecking", "no");
+            session.setConfig(config);
+            session.connect();
+
+            // SFTP-Kanal öffnen
+            channel = (ChannelSftp) session.openChannel("sftp");
+            channel.connect();
+
+            // Dateien hochladen
+            uploadDirectory(channel, localPath, remotePath);
+
+            System.out.println("Dateien wurden erfolgreich hochgeladen.");
+        } catch (JSchException | SftpException e) {
+            System.out.println("Fehler beim Hochladen der Dateien: " + e.getMessage());
+        } finally {
+            if (channel != null) {
+                channel.disconnect();
+            }
+            if (session != null) {
+                session.disconnect();
+            }
+        }
+    }
+
+    // Rekursiv alle Dateien und Unterverzeichnisse hochladen
+    private static void uploadDirectory(ChannelSftp channel, String localDir, String remoteDir) throws SftpException {
+        File localFile = new File(localDir);
+        File[] files = localFile.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                if (file.isFile()) {
+                    channel.put(file.getAbsolutePath(), remoteDir + "/" + file.getName());
+                } else if (file.isDirectory()) {
+                    String subRemoteDir = remoteDir + "/" + file.getName();
+                    if (!directoryExists(channel, subRemoteDir)) {
+                        channel.mkdir(subRemoteDir);
+                    }
+                    uploadDirectory(channel, file.getAbsolutePath(), subRemoteDir);
+                }
+            }
+        }
+    }
+
+    // Überprüfen, ob ein Verzeichnis auf dem SFTP-Server existiert
+    private static boolean directoryExists(ChannelSftp channel, String directory) {
+        try {
+            SftpATTRS attrs = channel.stat(directory);
+            return attrs != null && attrs.isDir();
+        } catch (SftpException e) {
+            return false;
+        }
+    }
+}
