@@ -1,0 +1,14 @@
+.grid-container {
+	display: grid;
+	grid-template-rows: 100px 100px;
+	grid-template-columns: 100px 100px 100px;
+	grid-gap: 25px;
+	row-gap: 50px;
+}
+
+.gallery-img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+	transition: opacity 0.25s ease-in-out;
+}
