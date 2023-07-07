@@ -1,14 +1,18 @@
 .grid-container {
-	display: grid;
-	grid-template-rows: 100px 100px;
-	grid-template-columns: 100px 100px 100px;
-	grid-gap: 25px;
-	row-gap: 50px;
-}
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 Spalten mit gleicher Breite */
+      grid-gap: 20px; /* Abstand zwischen den Grid-Items */
+    }
 
-.gallery-img {
-	max-width: 100%;
-	height: auto;
-	object-fit: cover;
-	transition: opacity 0.25s ease-in-out;
-}
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .grid-item img {
+      width: 200px;
+      height: 300px;
+      object-fit: cover;
+    }
