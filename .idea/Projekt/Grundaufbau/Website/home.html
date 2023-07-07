@@ -1,0 +1,107 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serbian Bread</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <header>
+      <link rel="stylesheet" href="navbar.css" />
+      <script>
+        function toggle_button() {
+          const element = document.getElementById("menu");
+          element.classList.toggle("active");
+
+          const element2 = document.getElementById("menu-bar");
+          element2.classList.toggle("active");
+        }
+      </script>
+      <div class="menu" id="menu" onclick="toggle_button()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-bar" id="menu-bar">
+        <ul>
+          <li><img src="./src/Logo.png" alt="logo"style="width: 99px;" /></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="aboutUs.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <section class="hero">
+      <section class="banner">
+        <img src="./src/Banner.png" alt="Banner Image" />
+        <p>Serbian Bakery</p>
+          <button class="btn" href="products.html">
+
+            Source Products
+          </button>
+      </section>
+    </section>
+    <section class="bakery-info">
+      <p>
+        In our Serbian bakery, we take immense pride in using the best ingredients sourced from our hometown. Nestled in the heart of Serbia, our bakery is surrounded by rich farmlands and bountiful orchards, allowing us to handpick the finest ingredients available. From the velvety soft wheat flour, harvested from local fields kissed by the sun, to the golden honey dripping with floral notes from nearby apiaries, every ingredient embodies the essence of our region. The eggs we use come from free-range chickens, ensuring their natural flavor and vibrant yolks infuse our bread with wholesome goodness. Fragrant herbs and spices from our very own herb gardens add an authentic touch, while locally produced artisanal cheeses bring a delightful richness to our bread creations. With each bite, you can taste the unique flavors of our beloved hometown, enveloped in the warmth and love that goes into every loaf we bake.
+      </p>
+    </section>
+    <section class="featured">
+      <h2>Bestseller</h2>
+      <ul class="card-list">
+        <div class="wrapper">
+          <div class="card">
+            <img src="./src/Bread1.png" />
+            <div class="info">
+              <h1>Petite Perfection: The Round Delight</h1>
+              <p>
+                Indulge in the delightful simplicity of our round small bread, a true masterpiece in its compact form. Baked to perfection, its golden crust envelopes a tender, airy crumb that delights the senses with every bite. Small in size but big in flavor, this petite bread is a harmonious blend of traditional craftsmanship and the finest ingredients, making it an irresistible treat for any occasion.
+              </p>
+              </p>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./src/Bread2.png" />
+            <div class="info">
+              <h1>Grandeur Loaf: A Majestic Delight</h1>
+              <p>
+                The Grandeur Loaf stands as a testament to the artistry and mastery of our Serbian bakery. This long, big bread captivates with its majestic presence, stretching gracefully along the countertop, enticing all who gaze upon it. With a crisp, golden crust and a soft, pillowy interior, each slice of this magnificent loaf offers a harmonious balance of textures and a delightful aroma that transports you to a world of indulgence and satisfaction.
+              </p>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./src/Bread3.png" />
+            <div class="info">
+              <h1>Intense Indulgence: Waterless Black Bread</h1>
+              <p>
+                Indulge in the extraordinary with our waterless black bread, an epitome of rich flavors and intense satisfaction. Crafted without the addition of water, this unique bread captivates the senses with its deep, dark hue and a complex aroma that lingers in the air. Each bite unveils a dense yet surprisingly tender texture, revealing notes of roasted grains and subtle hints of molasses, making it a truly exceptional treat for the discerning palate.
+              </p>
+              <button>Buy</button>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </section>
+    <section class="signup">
+      <h2>Are you ready?</h2>
+      <p>
+        Are you ready to embark on a tantalizing journey, where desire meets indulgence? Allow yourself to be seduced by the bewitching allure of our bread as it entices your senses, teasing your taste buds with its irresistible charm. With each bite, experience the captivating dance of flavors as they caress your tongue, enveloping your being in a wave of pure satisfaction. Surrender to the enigmatic allure and let this bread weave its way through your entire being, awakening a deep longing that can only be quenched by the exquisite pleasure it offers. Are you ready to give in and experience the euphoria that awaits?
+      </p>
+      <a href="signup.html" class="button">Buy now</a>
+    </section>
+    <footer>
+      <link rel="stylesheet" href="footer.css" />
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Serbian Kiss<3.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+body {
+  background-color: pink;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: ;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  height: 90%;
+  border-radius: 50px;
+  background: black;
+  box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: White;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #212121;
+}
+
+p {
+  margin-top: 5px;
+  color: pink;
+  font-size: 1.2rem;
+}
+
+footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}

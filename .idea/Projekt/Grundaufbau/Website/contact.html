@@ -1,0 +1,58 @@
+<body>
+  <head>
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="contact.css" />
+  </head>
+  <header>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+    </style>
+    <link rel="stylesheet" href="navbar.css" />
+    <script>
+      function toggle_button() {
+        const element = document.getElementById("menu");
+        element.classList.toggle("active");
+
+        const element2 = document.getElementById("menu-bar");
+        element2.classList.toggle("active");
+      }
+    </script>
+    <div class="menu" id="menu" onclick="toggle_button()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu-bar" id="menu-bar">
+      <ul>
+        <li><img src="src/Logo.png" alt="logo"style="width: 99px;" /></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutUs.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact us</h2>
+      <p>Fill out the form below to send us a message:</p>
+      <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+</body>
