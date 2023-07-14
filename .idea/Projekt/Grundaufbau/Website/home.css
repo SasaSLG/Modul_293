@@ -3,18 +3,18 @@
 body {
   margin: 0;
   padding: 0;
-  background: pink
+  background: pink;
+  font-family: 'Chivo Mono', monospace;
 }
 
 /* Hero */
-Hero section *p.hero {
+.hero {
   background-image: url("#");
   background-size: cover;
   background-position: center;
   color: white;
   padding: 100px 0;
   text-align: center;
-    font-family: Lucida Bright
 }
 
 .hero p {
@@ -24,24 +24,19 @@ Hero section *p.hero {
   z-index: 1;
   margin: 0;
   color: aliceblue;
-  font-size: 500px;
-  margin: 20px 0;
-  color: white;
   font-size: 100px;
   background-color: rgba(13, 13, 13, 0.3);
   padding: 0.4em 1.2em;
   transition: 0.2s ease;
-    font-family: Lucida Bright
 }
 
 .hero h2 {
   font-size: 48px;
   margin: 0;
-  font-family: Lucida Bright
 }
 
 .banner {
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,48 +57,39 @@ Hero section *p.hero {
   font-size: 32px;
   background-color: rgba(13, 13, 13, 0.3);
   padding: 0.4em 1.2em;
-
   border-radius: 0.25em;
   border-width: 2px;
   border-color: rgba(13, 13, 13, 0.75);
   transition: 0.2s ease;
-    font-family: Lucida Bright
 }
 
-/* featured */
+/* Featured */
 .featured {
   margin: 50px auto;
   max-width: 1200px;
-  background: pink
+  background: pink;
 }
 
 .featured h2 {
-  font-size: 72px;
+  font-size: 48px;
   text-align: center;
   color: #000000;
   margin-top: 10vh;
 }
 
 .card-list {
-  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 .wrapper {
-  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;
 }
 
 .card {
-  box-sizing: border-box;
   width: 322px;
   height: 414px;
   border-radius: 15px;
@@ -244,7 +230,7 @@ Hero section *p.hero {
   color: #141b23;
 }
 
-/* bakery info */
+/* Bakery info */
 .bakery-info {
   background-color: #000;
   color: #fff;
@@ -267,5 +253,44 @@ Hero section *p.hero {
   line-height: 1.5;
   text-align: justify;
   margin: 0 auto 50px;
-
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero p {
+    font-size: 50px;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
+
+  .featured h2 {
+    font-size: 36px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .signup h2 {
+    font-size: 36px;
+  }
+
+  .signup p {
+    font-size: 20px;
+  }
+
+  .button {
+    font-size: 20px;
+  }
+
+  .bakery-info h2 {
+    font-size: 3rem;
+  }
+
+  .bakery-info p {
+    font-size: 1.8rem;
+  }
+}
+
